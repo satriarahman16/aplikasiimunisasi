@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.tab-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border-bottom: 2px solid rgba(229,229,229); */
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.tab-box .tab_btn{
+    font-size: 18px;
+    font-weight: 600;
+    color: #919191;
+    background: none;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.line{
+    position: absolute;
+    top:72px;
+    
+    width: 143px;
+    height: 5px;
+    background-color: green;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.tab-box .tab_btn.active{
+    color:green;
+}
+
+.content-box{
+    padding: 20px;
+}
+
+.content-box .content{
+    display: none;
+    animation: moving .5s ease;
+}
+@keyframes moving {
+    from {transform: translateX(50px);opacity:0;}
+    to{transform: translateX(0px);opacity: 1;}
+    
+}
+.content-box .content.active{
+    display: block;
+}
+
+.content-box .content h2{
+    margin-bottom: 10px;
+}
+
+
+.container { 
+    /* width: 500px; */
+    /* display: block; */
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 10px; 
+    position: relative;
+    /* text-align: center; */
+    background-color: rgb(249, 243, 235);
+    border-radius: 20px;
+} 
+
+
+h2, 
+container { 
+    color: green;
+    text-align: center;   
+}
+
+#showdate{
+    margin-top: 10px;
+}
+
+.pilihan {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#info{
+    color: black;
+    /* padding: 40px;
+    margin-top: 20px; */
+}
+
+.faq{
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000;
+    cursor: pointer;
+}
+.pertanyaan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pertanyaan h4{
+    font-size: 1.2rem;
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+.answer p{
+    padding-top: 0.7rem;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.faq.active .answer{
+    max-height: 250px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.active svg{
+    transform: rotate(180deg);
+}
+
+svg{
+    transition: transform 0.5s ease-in;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.tabel{
+    height: 100%;
+    overflow-x: scroll;    
+    white-space: nowrap;
+    width: 100%;
+}
+
+.tabel img {
+    height: 100%;
+    vertical-align: top;
+}
+
+@media screen and (max-width: 340px) {
+    .line{
+        left: 0px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .line{
+        left: 0px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .line{
+        left: 15px;
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .line{
+        left: 20px;
+        width: 143px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .line{
+        left: 50px;
+        width: 143px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .line{
+        left: 90px;
+        width: 143px;
+    }
+}
+@media screen and (min-width: 1064px) {
+    .line{
+        left: 90px;
+        width: 143px;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .line{
+        left: 120px;
+        width: 143px;
+    }
+}
